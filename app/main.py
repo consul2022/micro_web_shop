@@ -1,13 +1,18 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Header
 import uvicorn
 
 
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/hello")
 def read_root():
     return {"message": "Бомби Слава"}
+
+@app.post("/agen")
+def create_agen(user_agent: str = Header(str)):
+    return user_agent
+
 
 
 
