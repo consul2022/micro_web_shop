@@ -1,6 +1,10 @@
 from fastapi import FastAPI, Header
 import uvicorn
-
+from fastapi import FastAPI, Depends
+from sqlalchemy.orm import Session
+from database import SessionLocal, engine
+from models import Base, User
+from schemas import UserCreate, UserOut
 
 
 app = FastAPI()

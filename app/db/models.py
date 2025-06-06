@@ -1,7 +1,5 @@
-from datetime import datetime
-from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, DateTime, Foreingkey, Text
-from app.db.database import Base
-from tomlkit.items import Float
+from sqlalchemy import Column, Integer, String, DateTime, Text, Float
+from app.db.db import Base
 
 
 class User(Base):
